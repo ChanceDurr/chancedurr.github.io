@@ -25,6 +25,6 @@ At first glance of the data, most could just say 'Well, looks like we have a hom
 
 In layman's terms, this means that though they seem like they are connected, they are not. This can be due to something called a confounding variable, or an unseen variable. For example, homelessness could probably be increasing as the cost of living in Seattle increases. Homelessness could also be increasing as the price of heroin gets lower. 
 
-## Other fun examples of spurious correlation/relationships
+### Other fun examples of spurious correlation/relationships
 
 [tylervigen.com](https://www.tylervigen.com/spurious-correlations)
