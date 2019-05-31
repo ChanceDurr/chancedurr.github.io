@@ -42,7 +42,6 @@ avatar: "/img/avatar-icon.png"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-<<<<<<< HEAD
 navbar-col: "#F5F5F5"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
@@ -50,28 +49,14 @@ page-col: "#FFFFFF"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 footer-col: "#F5F5F5"
-=======
-navbar-col: "#ba5ad4"
-navbar-text-col: "#404040"
-navbar-children-col: "#ba5ad4"
-page-col: "#FFFFFF"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#ba5ad4"
->>>>>>> parent of 8fb8bd7... Changed some colors and deleted premade posts
 footer-text-col: "#777777"
 footer-link-col: "#404040"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-<<<<<<< HEAD
 # navbar-img: "/img/nav-image.jpg"
 # footer-img: "/img/nav-image.jpg"
-=======
-# navbar-img: "/img/bgimage.png"
-# footer-img: "/img/bgimage.png"
->>>>>>> parent of 8fb8bd7... Changed some colors and deleted premade posts
 # page-img: "/img/bgimage.png"
 
 # --- Footer options --- #
