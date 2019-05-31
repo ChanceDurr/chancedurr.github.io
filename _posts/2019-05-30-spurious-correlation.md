@@ -8,5 +8,4 @@ tags: [statistics, confounding factor]
 comments: true
 ---
 
-# What is a Spurious Correlation
-
+## What is a Spurious Correlation
