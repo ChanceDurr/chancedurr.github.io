@@ -6,4 +6,4 @@ subtitle:
 
 ## Experience
 
-* Lambda School (May 28th - Current)
+* Lambda School (May 28th, 2019 - Current)
