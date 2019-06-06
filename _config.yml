@@ -23,7 +23,6 @@ description: Data Science Student
 
 # List of links in the navigation bar
 navbar-links:
-  New Page: 'anewpage'
   Resume: "resume"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
