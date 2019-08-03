@@ -14,6 +14,8 @@ NMR (Nuclear Magnetic Resonance) spectroscopy is one of the most popular tools t
 These scalar coupling, or J coupling constants obtained from an NMR spectrum contain information about relative bond distances and angles in a molecule. This is useful for determining the connectivity of atoms in a molecule.
 For the seasoned chemist, confirming a basic chemical structure from the peaks on an NMR spectra alone is definitely possible, such as the 1H NMR spectrum for 1,1,2-trichloroethane below. The peaks below correspond to the hydrogens in the molecule and can easily be assigned.
 
+1*321TqE0ajCpFRDfSloNKzg.png
+
 ## The Dataset
 We used this dataset that is part of the CHAMPS (Chemistry and Mathematics in Phase Space) Kaggle competition. The train dataset contained 4,658,147 scalar coupling observations of 85,003 unique molecules, and the test dataset contained 2,505,542 scalar coupling observations of 45,772 unique molecules. These molecules contained only the atoms: carbon (C), hydrogen (H), nitrogen (N), fluorine (F), and oxygen (O). There were 8 different types of scalar coupling: 1JHC, 1JHN, 2JHH, 2JHC, 2JHN, 3JHH, 3JHC, 3JHH. Fluorine coupling was not represented in this dataset.
 Looking at the data, we can see that the train and test sets had relatively even distributions of scalar coupling type, and of the number of atoms present in each dataset. This tells us that the train data is a good enough representation of the test data in order to create a model that predicts the scalar coupling constants.
