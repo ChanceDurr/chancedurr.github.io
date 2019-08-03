@@ -18,6 +18,8 @@ For the seasoned chemist, confirming a basic chemical structure from the peaks o
 
 ![nmr](/img/nmr.png)
 
+---
+
 But what happens when you are dealing with more complex molecules or are working to synthesize new ones where you can’t easily determine what splitting patterns mean? How can you validate that what you’ve isolated is what you think it is?
 
 This is where J coupling constants come in.
@@ -28,6 +30,8 @@ Therefore, software tools that can predict these constants accurately will be us
 
 In collaboration with [Elizabeth Ter Sahakyan](https://medium.com/@liztersahakyan]), this project aims to predict these scalar coupling constants using machine learning models given known properties of molecules so that they can be used in the application of research in chemistry.
 
+---
+
 <iframe src="https://giphy.com/embed/T2lUjGdArRxQs" width="500" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/breaking-bad-walter-white-bryan-cranston-T2lUjGdArRxQs">via GIPHY</a></p>
 
 ## The Dataset
@@ -37,6 +41,8 @@ Looking at the data, we can see that the train and test sets had relatively even
 
 ![data](/img/1*321TqE0ajCpFRDfSloNKzg.png)
 
+---
+
 ## What are the different types of scalar coupling constants?
 J coupling is an indirect interaction between the nuclear spins of 2 atoms. The number that comes before the J in the J coupling types (1J, 2J, 3J) denotes the number of bonds between the atoms that are coupling. So 1J, 2J, 3J coupling will have 1, 2, and 3 bonds between the atoms, respectively.
 
@@ -45,6 +51,8 @@ If we look at the distribution of the distance between atoms in the different ty
 The distribution of the scalar coupling constant values isolated by type also reveals that there are clear differences in the ranges that these values appear in. This gives us the insight that different molecular properties affect each type of J coupling differently and unique models should be used for all 8 coupling types found in the dataset.
 
 ![j_coup_type](/img/j_coup_type.png)
+
+---
 
 ## What factors affect the scalar coupling constant?
 Understanding what properties of molecules affect the scalar coupling constant is the key to training a model that can accurately predict these values for future experiments.
