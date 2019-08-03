@@ -18,8 +18,6 @@ For the seasoned chemist, confirming a basic chemical structure from the peaks o
 
 ![nmr](/img/nmr.png)
 
----
-
 But what happens when you are dealing with more complex molecules or are working to synthesize new ones where you can’t easily determine what splitting patterns mean? How can you validate that what you’ve isolated is what you think it is?
 
 This is where J coupling constants come in.
@@ -30,8 +28,6 @@ Therefore, software tools that can predict these constants accurately will be us
 
 In collaboration with [Elizabeth Ter Sahakyan](https://medium.com/@liztersahakyan]), this project aims to predict these scalar coupling constants using machine learning models given known properties of molecules so that they can be used in the application of research in chemistry.
 
----
-
 <iframe src="https://giphy.com/embed/T2lUjGdArRxQs" width="500" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/breaking-bad-walter-white-bryan-cranston-T2lUjGdArRxQs">via GIPHY</a></p>
 
 ## The Dataset
@@ -41,8 +37,6 @@ Looking at the data, we can see that the train and test sets had relatively even
 
 ![data](/img/1*321TqE0ajCpFRDfSloNKzg.png)
 
----
-
 ## What are the different types of scalar coupling constants?
 J coupling is an indirect interaction between the nuclear spins of 2 atoms. The number that comes before the J in the J coupling types (1J, 2J, 3J) denotes the number of bonds between the atoms that are coupling. So 1J, 2J, 3J coupling will have 1, 2, and 3 bonds between the atoms, respectively.
 
@@ -51,8 +45,6 @@ If we look at the distribution of the distance between atoms in the different ty
 The distribution of the scalar coupling constant values isolated by type also reveals that there are clear differences in the ranges that these values appear in. This gives us the insight that different molecular properties affect each type of J coupling differently and unique models should be used for all 8 coupling types found in the dataset.
 
 ![j_coup_type](/img/j_coup_type.png)
-
----
 
 ## What factors affect the scalar coupling constant?
 Understanding what properties of molecules affect the scalar coupling constant is the key to training a model that can accurately predict these values for future experiments.
@@ -90,3 +82,56 @@ We first started with a simple Linear Regression for our baseline, but needed so
 
 Ultimately, we used a LightGBM Regressor model for all 8 J types. We then tuned the hyperparamers, by running the LGBM Regressor with `early_stopping_rounds` and `RandomizedSearchCV` to give us the best score we could get.
 Below you can find the summary of the modeling, which includes each model broken down by its respective validation score and permutation importances:
+
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/1G0evilM5HIXr6OqDmpWB9C5U7Yb8SXe9/page/kfXw" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/1KtoAwhnZ-6Ughws7DIHZAxXBRgdHY33F/page/kfXw" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+## Validation + Score
+Validation error was calculated based on the log of the mean absolute error (MAE). The function below takes all models into account and returns the average score:
+
+We also calculated separate validation scores for each model to better understand how each J type model scored. If one model was scored significantly lower than the other, this would give us the insight to potentially explore other modeling options for that coupling type. To calculate the validation score for separate J types, we used:
+```python
+np.log((val_pred — y_val).abs().mean())
+```
+For this metric, the MAE for any group has a floor of 1e-9, which means the best possible score is -20.732. The best publicly available score is currently -3.069.
+
+## Results + Discussion
+Using data that included known molecular properties of molecules, we created machine learning models to predict the scalar coupling constant of a pair of atoms. We used 8 different LightGBM Regressor models to predict the target scalar coupling constant for each type of coupling: 1JHC, 1JHN, 2JHH, 2JHC, 2JHN, 3JHH, 3JHC, 3JHH, resulting in a final score of -0.64.
+
+We engineered ~60 features to help train our models accurately and improve the validation scores. With so many features, some were very helpful for our models, some not so much, and for the ones that did not add anything at all to our score, we discarded them. We also found that over cluttering the data with bunch of features could also hurt the score, so we removed a few of those as well.
+The validation scores for each J coupling type were:
+- 1JHC : 0.258
+- 1JHN : -0.388
+- 2JHH : -1.179
+- 2JHC : -0.352
+- 2JHN : -0.973
+- 3JHH : -0.991
+- 3JHC : -0.259
+- 3JHN : -1.242
+
+The model predicting the 3JHN coupling constants performed the best with a validation score of -1.242, and the model predicting the 1JHC coupling constants performed the worst with a validation score of 0.25.
+
+The significant differences in validation scores between models is due to features that are unnaccounted for in our dataset that likely have a large effect on that specific type of coupling. To improve those scores, some features we can try adding are ones that take dipole interactions, magnetic shielding, and potential energy into account.
+
+All of the models had different feature importances depending on the type of coupling. Some of the most common features with high importance for each model were the distance, mulliken_charges, and both of the bond_lengths (x and y).
+
+Below are two shapely plots showing two different predictions. The one on top is a prediction for molecule dsgdb9nsd_133884 with 1JHC, the worst model, and the one on the bottom is for molecule dsgdb9nsd_105770 with 3JHN, the best model we have. With the 1JHC model, we predicted 90.14, when the actual value was 99.69, resulting in an error of 9.55. With the 3JHN model, we were way closer to the actual value of 0.06, with a prediction of 0.77, meaning the model was only off by 0.71.
+
+![pred_shap](img/pred_shap.png)
+
+## Data + Code
+The data for this project was provided by CHAMPS (Chemistry and Mathematics in Phase Space) for a Kaggle competition. All code was written in python and visualizions were created using Matplotlib, ASE, Eli5, and Seaborn libraries. You find the notebooks to engineer features, create models, and visualizations in this github repo.
+
+Since this project is part of an ongoing Kaggle competition we will continue to work toward improving the models until the competition deadline of August 28, 2019. Our team is currently in the top 50% on the public leaderboard.
+
+## Sources
+[Kaggle Competition](https://www.kaggle.com/c/champs-scalar-coupling/data?source=post_page---------------------------)
+
+[Literature](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4218771/?source=post_page---------------------------)
+
+[UCI Chem](https://www.chem.uci.edu/~jsnowick/groupweb/Maestro/coupling_constants.pdf)
+
+[University of Wisconsin Chem](https://www.chem.wisc.edu/areas/reich/nmr/Notes-05-HMR-v26-part2.pdf)
+
+[J-Coupling](https://en.wikipedia.org/wiki/J-coupling?source=post_page---------------------------)
