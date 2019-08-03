@@ -28,15 +28,20 @@ Therefore, software tools that can predict these constants accurately will be us
 
 In collaboration with [Elizabeth Ter Sahakyan](https://medium.com/@liztersahakyan]), this project aims to predict these scalar coupling constants using machine learning models given known properties of molecules so that they can be used in the application of research in chemistry.
 
-<iframe src="https://giphy.com/embed/T2lUjGdArRxQs" width="400" height="230" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/breaking-bad-walter-white-bryan-cranston-T2lUjGdArRxQs">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/T2lUjGdArRxQs" width="500" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/breaking-bad-walter-white-bryan-cranston-T2lUjGdArRxQs">via GIPHY</a></p>
 
 ## The Dataset
 We used this dataset that is part of the CHAMPS (Chemistry and Mathematics in Phase Space) Kaggle competition. The train dataset contained 4,658,147 scalar coupling observations of 85,003 unique molecules, and the test dataset contained 2,505,542 scalar coupling observations of 45,772 unique molecules. These molecules contained only the atoms: carbon (C), hydrogen (H), nitrogen (N), fluorine (F), and oxygen (O). There were 8 different types of scalar coupling: 1JHC, 1JHN, 2JHH, 2JHC, 2JHN, 3JHH, 3JHC, 3JHH. Fluorine coupling was not represented in this dataset.
+
 Looking at the data, we can see that the train and test sets had relatively even distributions of scalar coupling type, and of the number of atoms present in each dataset. This tells us that the train data is a good enough representation of the test data in order to create a model that predicts the scalar coupling constants.
+
+![data](/img/1*321TqE0ajCpFRDfSloNKzg.png)
 
 ## What are the different types of scalar coupling constants?
 J coupling is an indirect interaction between the nuclear spins of 2 atoms. The number that comes before the J in the J coupling types (1J, 2J, 3J) denotes the number of bonds between the atoms that are coupling. So 1J, 2J, 3J coupling will have 1, 2, and 3 bonds between the atoms, respectively.
+
 If we look at the distribution of the distance between atoms in the different types of coupling below, we can see that 1J has the lowest distance between atoms, and 3J has the highest distance between atoms, with 2J somewhere in the middle. The increase in bonds between atoms is observed as an increase in the distance between them and contains information that could help a model predict the J coupling constant more accurately.
+
 The distribution of the scalar coupling constant values isolated by type also reveals that there are clear differences in the ranges that these values appear in. This gives us the insight that different molecular properties affect each type of J coupling differently and unique models should be used for all 8 coupling types found in the dataset.
 
-![data](/img/1*321TqE0ajCpFRDfSloNKzg.png)
+![j_coup_type](/img/j_coup_type.png)
