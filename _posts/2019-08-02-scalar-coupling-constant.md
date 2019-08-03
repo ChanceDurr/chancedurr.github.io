@@ -28,7 +28,7 @@ Therefore, software tools that can predict these constants accurately will be us
 
 In collaboration with [Elizabeth Ter Sahakyan](https://medium.com/@liztersahakyan]), this project aims to predict these scalar coupling constants using machine learning models given known properties of molecules so that they can be used in the application of research in chemistry.
 
-<iframe src="https://giphy.com/embed/T2lUjGdArRxQs" width="480" height="230" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/breaking-bad-walter-white-bryan-cranston-T2lUjGdArRxQs">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/T2lUjGdArRxQs" width="400" height="230" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/breaking-bad-walter-white-bryan-cranston-T2lUjGdArRxQs">via GIPHY</a></p>
 
 ## The Dataset
 We used this dataset that is part of the CHAMPS (Chemistry and Mathematics in Phase Space) Kaggle competition. The train dataset contained 4,658,147 scalar coupling observations of 85,003 unique molecules, and the test dataset contained 2,505,542 scalar coupling observations of 45,772 unique molecules. These molecules contained only the atoms: carbon (C), hydrogen (H), nitrogen (N), fluorine (F), and oxygen (O). There were 8 different types of scalar coupling: 1JHC, 1JHN, 2JHH, 2JHC, 2JHN, 3JHH, 3JHC, 3JHH. Fluorine coupling was not represented in this dataset.
