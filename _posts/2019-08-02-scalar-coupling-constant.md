@@ -11,10 +11,22 @@ comments: true
 ## What is a Scalar Coupling Constant?
 
 NMR (Nuclear Magnetic Resonance) spectroscopy is one of the most popular tools to elucidate chemical structures of an unknown molecule in solution. In practical application, NMR can also be used to validate new structures because it provides information about scalar coupling, which is an indirect interaction of the nuclei of atoms in a magnetic field.
+
 These scalar coupling, or J coupling constants obtained from an NMR spectrum contain information about relative bond distances and angles in a molecule. This is useful for determining the connectivity of atoms in a molecule.
+
 For the seasoned chemist, confirming a basic chemical structure from the peaks on an NMR spectra alone is definitely possible, such as the 1H NMR spectrum for 1,1,2-trichloroethane below. The peaks below correspond to the hydrogens in the molecule and can easily be assigned.
 
 ![nmr](/img/nmr.png)
+
+But what happens when you are dealing with more complex molecules or are working to synthesize new ones where you can’t easily determine what splitting patterns mean? How can you validate that what you’ve isolated is what you think it is?
+
+This is where J coupling constants come in.
+
+If you know what J coupling constant you’re looking for prior to getting the NMR spectrum, you can use that number as a confirmation that you’ve isolated your target molecule, or at the very least, confirm that you’re on the right track. Incorrect structures can be reported if there is no way to validate the coupling constants with the results found.
+
+Therefore, software tools that can predict these constants accurately will be useful in validation of structures in practice.
+
+In collaboration with Elizabeth Ter Sahakyan[https://medium.com/@liztersahakyan], this project aims to predict these scalar coupling constants using machine learning models given known properties of molecules so that they can be used in the application of research in chemistry.
 
 ## The Dataset
 We used this dataset that is part of the CHAMPS (Chemistry and Mathematics in Phase Space) Kaggle competition. The train dataset contained 4,658,147 scalar coupling observations of 85,003 unique molecules, and the test dataset contained 2,505,542 scalar coupling observations of 45,772 unique molecules. These molecules contained only the atoms: carbon (C), hydrogen (H), nitrogen (N), fluorine (F), and oxygen (O). There were 8 different types of scalar coupling: 1JHC, 1JHN, 2JHH, 2JHC, 2JHN, 3JHH, 3JHC, 3JHH. Fluorine coupling was not represented in this dataset.
