@@ -35,7 +35,7 @@ We used this dataset that is part of the CHAMPS (Chemistry and Mathematics in Ph
 
 Looking at the data, we can see that the train and test sets had relatively even distributions of scalar coupling type, and of the number of atoms present in each dataset. This tells us that the train data is a good enough representation of the test data in order to create a model that predicts the scalar coupling constants.
 
-![data](/img/1*321TqE0ajCpFRDfSloNKzg.png)
+![data](/img/train_test.png)
 
 ## What are the different types of scalar coupling constants?
 J coupling is an indirect interaction between the nuclear spins of 2 atoms. The number that comes before the J in the J coupling types (1J, 2J, 3J) denotes the number of bonds between the atoms that are coupling. So 1J, 2J, 3J coupling will have 1, 2, and 3 bonds between the atoms, respectively.
