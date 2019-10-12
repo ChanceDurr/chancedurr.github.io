@@ -4,6 +4,6 @@ title: My Resume
 subtitle: 
 ---
 
-## Experience
+## Education
 
 * Lambda School (May 28th, 2019 - Current)
