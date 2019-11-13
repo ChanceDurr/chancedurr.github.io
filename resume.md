@@ -18,13 +18,12 @@ _JULY 2018 - MAY 2018_
 
 ## EDUCATION
 
-- ### Lambda School, Online — Data Science
+- ### Lambda School, Online — Data Science - May 2019 - Current
 
-  - #### MAY 2019 - CURRENT
+  -- 9 month full-time course for Data Science, Machine Learning, and AI.
 
-  - 9 month full-time course for Data Science, Machine Learning, and AI.
 
-- ### Soldotna High School, Soldotna, AK — Diploma
+- ### Soldotna High School, Soldotna, AK — Diploma - May 2016
 
   - #### SEPTEMBER 2012 - MAY 2016
 
