@@ -25,8 +25,6 @@ _JULY 2018 - MAY 2018_
 
 - ### Soldotna High School, Soldotna, AK — Diploma - May 2016
 
-  - #### SEPTEMBER 2012 - MAY 2016
-
 ## Projects
 
 ### Scalar Coupling Constant Kaggle Competition
