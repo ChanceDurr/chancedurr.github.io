@@ -40,4 +40,4 @@ So, we'll go ahead and start there.
 
 ## The Map
 
-![Map of the overworld](img/overworld_map.png)
+![Map of the overworld](/img/overworld_map.png)

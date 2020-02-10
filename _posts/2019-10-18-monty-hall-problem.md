@@ -6,7 +6,7 @@ tags: [statistics, probability]
 comments: true
 ---
 
-![monty hall picture](img/montyhall.jpg)
+![monty hall picture](/img/montyhall.jpg)
 
 ## What is the [Monty hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem)?
 
