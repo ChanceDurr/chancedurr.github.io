@@ -2,8 +2,6 @@
 layout: post
 title: Spurious Correlation
 subtitle: Misleading statistical evidence
-gh-repo: ChanceDurr/chancedurr.github.io
-gh-badge: [star, fork, follow]
 tags: [statistics, confounding factor]
 comments: true
 ---

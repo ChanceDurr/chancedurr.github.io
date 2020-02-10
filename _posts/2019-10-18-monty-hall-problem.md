@@ -2,8 +2,6 @@
 layout: post
 title: Monty Hall Problem
 subtitle: How the Monty Hall problem works
-gh-repo: ChanceDurr/chancedurr.github.io
-gh-badge: [star, fork, follow]
 tags: [statistics, probability]
 comments: true
 ---
