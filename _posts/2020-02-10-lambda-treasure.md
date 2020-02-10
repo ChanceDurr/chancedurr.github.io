@@ -21,7 +21,7 @@ This project includes the use of:
 
 ### What is the project about
 
-During the week we were given to work on this, were supposed to catch as many
+During the week we were given to work on this, we were supposed to catch as many
 Golden Snitches as possible.
 
 In order to catch a Golden Snitch, you have to be able to get to the Dark World.
@@ -37,3 +37,7 @@ To buy a name you need to have 1000 gold.
 To get 1000 gold you need to traverse the map and find treasure.
 
 So, we'll go ahead and start there.
+
+## The Map
+
+![Map of the overworld](img/overworld_map.png)
