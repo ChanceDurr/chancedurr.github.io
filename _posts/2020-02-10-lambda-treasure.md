@@ -22,17 +22,17 @@ This project includes the use of:
 ### What is the project about
 
 During the week we were given to work on this, we were supposed to catch as many
-Golden Snitches as possible. :trophy:
+Golden Snitches as possible.
 
 In order to catch a Golden Snitch, you have to be able to get to the Dark World.
 
-To go to the Dark World, you need boots, a jacket, and the ability to warp.:black-circle:
+To go to the Dark World, you need boots, a jacket, and the ability to warp.
 
-To get boots and a jacket, you need to mine Lambda Coin.:shirt::shoe:
+To get boots and a jacket, you need to mine Lambda Coin.
 
 To get Lambda Coin you need to buy a name.
 
-To buy a name you need to have 1000 gold. :moneybag:
+To buy a name you need to have 1000 gold.
 
 To get 1000 gold you need to traverse the map and find treasure.
 
@@ -55,3 +55,73 @@ So, we are going to want to keep track of what rooms are connected and which
 direction they are. This will help with our cooldowns a lot.
 
 ![Map of the overworld](/img/overworld_map.png)
+
+## Getting a name
+
+Once we have the map traversed, we can work towards getting our name.
+The approach I went with when trying to get my name was to just randomly walk
+around and find treasure then head back to the shop and sell it. It didn't take
+long as the smallest treasure I found was still worth 100 gold.
+
+After getting 1000 gold, I went to Pirate Ry's in room 467. That's when I
+bought the name 'Chauncey'
+
+## Abilities
+
+After getting a name, you unlock a whole new world of possibilites. While
+traversing the map I noticed a bunch of unique rooms. So I went to each of
+them to see what I could do.
+
+Here are some abilities I accrued:
+
+- **Recall**: The ability to bring my self back to room 0. Useful for getting
+back to the shop quickly.
+- **Dash**: The ability to travel through a straight line of room without having
+to cooldown each time.
+- **Fly**: Being able to fly instead of walk, it's faster then walking in all
+situations except in a cave terrain.
+- **Warp**: The ability to warp to an alternate dimension. The Dark World.
+- **Carry**: Gives me a friendly ghost to help me carry an item when
+I am over-encumbered.
+
+## Traveling
+
+Now that I have multiple means of quick travel. I can start doing some more
+advanced stuff. I created a function called `fast_travel` to help me get around
+quicker. It uses the abilites in the right situation and uses breadth-first
+traversal to find the shortest path to where I want to go.
+
+## Lambda Coin
+
+Time to start getting some coin. I've found out pretty quickly that you could
+examine the well. When you do, it gives back a bunch of numbers, binary
+specifically.
+
+``` python
+10000010
+00000001
+01000110
+01001000
+00000001
+10000010
+00000001
+01101001
+01001000
+00000001
+10000010
+00000001
+01101110
+01001000
+00000001
+10000010
+00000001
+01100100
+01001000
+00000001
+10000010
+00000001
+00100000
+01001000
+00000001
+10000010
+00000001```
