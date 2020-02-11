@@ -6,6 +6,8 @@ subtitle:
 
 One of my favorite hobbies is electronics and IoT things!
 
+## Growing Up
+
 I've had a Raspberry Pi and a lot of Arduino stuff for a while and love creating
 things. The most recent thing I made was for my brother. It's an LED that
 automatically turns on when he starts streaming on Twitch. That way our family
@@ -19,6 +21,8 @@ down pretty quick and build a calculator with it.
 
 From there I was always taking stuff apart, including that computer. Eventually
 I became the go to for all electronic stuff for my family.
+
+## Intro to Python and Robotics
 
 After graduating high school I went to trade school for Industrial Electricty.
 When I attended there we had a unit on robotics and programming and that's
