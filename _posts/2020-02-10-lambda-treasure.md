@@ -97,7 +97,7 @@ Time to start getting some coin. I've found out pretty quickly that you could
 examine the well. When you do, it gives back a bunch of numbers, binary
 specifically.
 
-``` python
+```python
 10000010
 00000001
 01000110
@@ -124,4 +124,80 @@ specifically.
 01001000
 00000001
 10000010
-00000001```
+00000001
+```
+
+Using a 8-bit computer that we built the previous week, I was able to decipher
+this code and have it print out `Mine in room 103`
+
+Now this is some useful information. If you tried to mine in a random room,
+you would get a huge cooldown and a message saying `There is no coin here`.
+
+So, I traveled to this room and got the last proof on the blockchain and
+submitted a new proof, and got a coin. However, when I tried it again, I got
+the message saying `There is no coin here` again. So I went back to the well.
+Turns out, each time you mine a coin, the room changes. So I create a function
+that would automatically travel to the well, get the room, travel to said
+room, then mine a coin and repeat.
+
+Now that we have some coins, we can use them!
+
+## Getting Gear
+
+On the map there is something called the Transmogriphier. When you examine it
+It tells you that you need some treasure and a Lambda Coin. So, I went and
+gathered some more treasure. Then starting transmogriphying it. Each time it
+would give me either boots or a jacket. They all had different tiers though.
+
+The boots all had different speed ratings depending on the tier.
+
+The jackets all had different strength ratings also depending on the tier.
+
+So the boots made my cooldowns less, and the jacket allowed me to carry more.
+Now I am faster than ever before!
+
+## The Dark World
+
+Now that I had gear and the ability to warp, I decided to go to the Dark World.
+When I warped, I got to a room that was just Darkness. I manually walked around
+and couldn't find anything. So I decided it was time to map out the underworld
+with our traversal algorithm.
+
+![Dark World Map](/img/dark_map.png)
+
+## The Dark well
+
+The only room in the Dark World, was another well at room 555.
+
+So I examined it and got back some more binary code. This time, it read
+
+`The Snitch is in room 788`
+
+So, I went there, but the room was empty. So I went back to the well.
+
+`The Snitch is in room 842`
+
+That's when I realized there was only one snitch, and everybody was chasing
+for it at the same time.
+
+Now I've got to create another algorithm that will do this as fast as
+possible, automatically.
+
+## Catching Gold Snitches
+
+When it came to catching the Golden Snitches, the trick was to sit at the well
+and wait for someone to grab the snitch. As soon as the well showed the new room
+that the snitch was in, it was an all out sprint, finding the shortest path and
+using all possible abilites in the right situations so that you got there first.
+
+## The Result
+
+At the end of the week, I ended up with 716 Golden snitches.
+I came in second place by just 30.
+
+However, it was a win-win as we both broke the previous record for most golden
+snitches caught.
+
+This week long project taught a lot about algorithmic and computational
+efficiency as well as teamwork. We all came together to create extremely
+efficient algorithms while also taking first place in other categories.
