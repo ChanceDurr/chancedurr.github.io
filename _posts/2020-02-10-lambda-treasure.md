@@ -19,6 +19,9 @@ This project includes the use of:
 - API endpoints
 - Advanced Algorithms
 
+You can find most of the code [here](https://colab.research.google.com/drive/1paReyy2r0PrJuhF355_TdHyx5CPw3yfj)
+on a Google Colab or on our teams [Github Repo](https://github.com/Team-Nowhere/CS-Build-Week-2)
+
 ### What is the project about
 
 During the week we were given to work on this, we were supposed to catch as many
