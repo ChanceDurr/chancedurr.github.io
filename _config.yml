@@ -25,7 +25,10 @@ description: Data Science Student
 navbar-links:
   Resume: "resume"
   About Me: 'aboutme'
-  Github: "https://github.com/ChanceDurr"
+  Socials:
+    - Github: "https://github.com/ChanceDurr"
+    - LinkedIn: "https://www.linkedin.com/in/chancedare/"
+    - Twitter: "https://twitter.com/chance_dare"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
