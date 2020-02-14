@@ -56,3 +56,5 @@ Used a combination of 8 different machine learning models to get a low score(Log
 - NLP
 - Flask
 - RESTful API
+
+![resume](img/resume.png)
