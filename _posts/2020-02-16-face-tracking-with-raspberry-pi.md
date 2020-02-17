@@ -6,6 +6,10 @@ tags: [IoT, raspberrypi, opencv, face detection]
 comments: true
 ---
 
+## The outcome
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tr2rqoO8xs4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## The Project
 
 After following [this guide](https://realpython.com/face-recognition-with-python/)
@@ -36,13 +40,13 @@ from one of my monitors. Then I noticed this __Halloween__ decoration that has
 been sitting in my closet for two years. It plugs into the wall, and has LED's,
 there's no way that doesn't convert AC to DC!
 
-![light thingy](/img/light_thing.jpg)
+![light thingy](/img/light_thing.jpg){:height="50%" width="50%"}
 
 After tearing it apart I was able to get the peice I needed! After pulling out
 the digital multimeter, I was able to figure out that outputs 28V DC. That's
 obviously way too much for my little servo.
 
-![inverter]()(/img/inverter.jpg)
+![inverter](/img/inverter.jpg){:height="50%" width="50%"}
 
 Now I needed to get a voltage regulator to step this down to about 5V.
 Unfortunetly I didn't have one laying around. So, I got on Amazon and ordered
@@ -63,7 +67,7 @@ Here's What I ended up doing:
 import cv2
 import pigpio
 
-pi = pigpio.pi(host='192.168.1.32')
+pi = pigpio.pi(host=<'raspberrypi IP'>)
 
 cam_min = 550
 cam_mid = 1425
@@ -103,14 +107,16 @@ while True:
 
     # Create a boundary of where we want the face
     cv2.rectangle(frame, (850, 0), (width-850, height), (255, 0, 0), 2)
+
+    # If face not in boundary, move camera to desired position
     if face_x != None:
-        # move to left
+        # move to right
         if face_x < 850:
             if cam_position > 550:
                 cam_position += 9
                 pi.set_servo_pulsewidth(12, cam_position)
 
-        # move to right
+        # move to left
         if face_x > width-850:
             if cam_position < 2300:
                 cam_position -= 9
@@ -128,5 +134,3 @@ while True:
 video_capture.release()
 cv2.destroyAllWindows()
 ```
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Tr2rqoO8xs4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
