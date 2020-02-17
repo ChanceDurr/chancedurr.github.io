@@ -2,7 +2,7 @@
 layout: post
 title: Face Tracking with Raspberry Pi
 subtitle: Moving a camera to keep you in frame
-gh-repo: github.com/ChanceDurr/face_tracking
+gh-repo: ChanceDurr/face_tracking
 gh-badge: [star, fork, follow]
 tags: [IoT, raspberrypi, opencv, face detection]
 comments: true

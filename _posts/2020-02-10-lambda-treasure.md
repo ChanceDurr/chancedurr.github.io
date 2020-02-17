@@ -2,7 +2,7 @@
 layout: post
 title: Lambda Treasure
 subtitle: My most fun project at Lambda
-gh-repo: github.com/Team-Nowhere/CS-Build-Week-2
+gh-repo: Team-Nowhere/CS-Build-Week-2
 gh-badge: [star, fork, follow]
 tags: [graphs, computer science, API, blockchain]
 comments: true

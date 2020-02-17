@@ -2,7 +2,7 @@
 layout: post
 title: Scalar Coupling Constant
 subtitle: Predicting the Scalar Coupling Constant
-gh-repo: github.com/elizabethts/Predicting-Scalar-Coupling-Constants
+gh-repo: elizabethts/Predicting-Scalar-Coupling-Constants
 gh-badge: [star, fork, follow]
 tags: [machinelearning, chemistry]
 comments: true
