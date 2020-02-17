@@ -18,9 +18,9 @@ it a step further. So I thought "What if I could make it track my face?".
 
 ## Getting Started
 
-The first thing that came to mind was to use a [servo]() to turn the camera
-back and forth. In order to get that servo to work, I was going to need something
-to send it a signal, and something to power it.
+The first thing that came to mind was to use a [servo](https://www.parallax.com/product/900-00005)
+to turn the camera back and forth. In order to get that servo to work, I was
+going to need something to send it a signal, and something to power it.
 
 Obviously I have experience with a Raspberry Pi, So I instantly pulled that out
 of the electronics graveyard I have. Booted it up and started updating it. This
@@ -32,11 +32,11 @@ Now that I had my Raspberry Pi up and running, it was time to figure out how I
 was going to power this servo. After looking up the specs and finding I needed
 4-6 volts I tried thinking of a few ways to get that. I could've just strapped
 a couple batteries together and called it good, but I wanted something that
-was more __permanent__.
+was more _permanent_.
 
 I started looking around my room for something that took 120V from the wall
 and converted it to DC. However I couldn't just take one of the power adapters
-from one of my monitors. Then I noticed this __Halloween__ decoration that has
+from one of my monitors. Then I noticed this _Halloween_ decoration that has
 been sitting in my closet for two years. It plugs into the wall, and has LED's,
 there's no way that doesn't convert AC to DC!
 
@@ -54,7 +54,7 @@ Unfortunetly I didn't have one laying around. So, I got on Amazon and ordered
 
 After a bit of soldering and some testing, I was able to get my 5V!
 
-![happy 5 volts](/img/5v.JPG)
+![happy 5 volts](/img/5v.JPG){:height="50%" width="50%"}
 
 ## The Code
 
