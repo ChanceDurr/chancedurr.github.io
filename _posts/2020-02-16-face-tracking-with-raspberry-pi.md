@@ -26,7 +26,7 @@ going to need something to send it a signal, and something to power it.
 
 Obviously I have experience with a Raspberry Pi, So I instantly pulled that out
 of the electronics graveyard I have. Booted it up and started updating it. This
-poor thing still was using Python 2.
+poor thing was still using Python 2.
 
 ## Powering the servo
 
