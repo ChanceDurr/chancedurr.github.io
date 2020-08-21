@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drug Overdoses in Conneticut
-subtitle: Cleaning and Analysing the drug overdoses in Conneticut
+title: Drug Overdoses in Connecticut
+subtitle: Cleaning and Analysing the drug overdoses in Connecticut
 gh-repo:
 gh-badge: [star, fork, follow]
 tags: [pandas, data cleaning, analysis]
@@ -25,7 +25,7 @@ I decided to go ahead and check all of the NaN value counts in the dataset
 ![Picture of NaN values in Dataset](/img/dodNAN.png)
 
 
-As I though we were going to have a ton of NaN's for the individual drugs, because they are going to be either Y or NaN for each observation. I also didn't plan on using a lot of the geo data. I probably would have if the data was national, but I have no strong connection to Conneticut, so to be honest, I wasn't really worried about finding out what areas had more overdoses. However I did want to know some demographics about the overdoses, and the NaN count in those features were fortunetly low.
+As I though we were going to have a ton of NaN's for the individual drugs, because they are going to be either Y or NaN for each observation. I also didn't plan on using a lot of the geo data. I probably would have if the data was national, but I have no strong connection to Connecticut, so to be honest, I wasn't really worried about finding out what areas had more overdoses. However I did want to know some demographics about the overdoses, and the NaN count in those features were fortunetly low.
 
 After going through, these are the columns I decided to drop from the dataframe.
 
