@@ -139,3 +139,8 @@ Here is another chart that shows the overdoses by Age Groups and also shows the 
 ![2012 Data](/img/DODage1.png)
 
 ![2018](/img/DODage2.png)
+
+
+## Well That's it!
+
+Hopefully you enjoyed this if you just happen to come across it, or if you are an employer, hopefully this shows I have somewhat an idea of how to play with data with python and pandas. Obviously I only really used like 10% of pandas here. I didn't post it, but I also played around with some crosstabs and pivot tables. But hey, if you already at the end of this post, You might as well call me in for an interview. Thanks for reading!
