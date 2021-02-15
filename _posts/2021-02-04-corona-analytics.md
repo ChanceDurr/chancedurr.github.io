@@ -6,7 +6,7 @@ tags: [data, dashboard]
 comments: true
 ---
 
-https://coronaanalytics.herokuapp.com/
+[The website (Hosted on Heroku)](https://coronaanalytics.herokuapp.com/)
 
 ## Data Dashboard using Dash
 
